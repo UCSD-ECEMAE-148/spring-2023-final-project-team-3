@@ -16,11 +16,11 @@ The project goal is for the vehicle to find a human target, then follow them unt
 * PID controller for steering/throttle
 * Follow a particular human with visual identifier
 
-## Object Detection
+## Object Detection - "obs_avoid_2.py"
 The object detection script is accomplished using DepthAI on an OAK-D Lite. When an object comes into view, the robot will turn away from it depending on which region of the camera's view the object occupies. The camera FOV is divided into 5 "buckets"; objects towards the edge of the FOV (outer buckets) will make the bot turn less and objects towards the middle of the FOV (inner buckets) will make the bot turn more. When an object comes within ___ feet of the camera, the robot is instructed to stop.
 
 ## Human Following
-The human following script is accomplished using DepthAI Yolo on an OAK-D Lite. This code creates a bounding box around a human and determines its vertical centerline in horizontal pixels. The coordinate is normalized by dividing the coordinate by the horizontal image resolution - call this "x". The VESC steering value is calculated according to the following formula:
+The human following script is accomplished using DepthAI Yolo on an OAK-D Lite. The function "displayframe" creates a bounding box around a human and determines its vertical centerline in horizontal pixels. The coordinate is normalized with the function "frameNorm" by dividing the coordinate by the horizontal image resolution - call this "x". The VESC steering value is calculated according to the following formula:
 <p align="center">
 $steering = G(x-0.5) + 0.5$
 </p>
