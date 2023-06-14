@@ -1,4 +1,10 @@
 # Team 3 - The Autonomous Amigos - Human Following Robot with Obstacle Avoidance
+### Team:
+ECE - Sialoi Taa
+
+MAE - Daniel Ruiz, Ryan Evans, Hanyang Feng
+
+UCSD JSOE - ECE/MAE 148 - SP23 - Team 3
 
 ## Project Objective
 The project goal is for the vehicle to find a human target, then follow them until it gets within a certain distance. Then, when given a hand signal, the robot will open a hatch containing the user's meal. The robot will also avoid any obstacles in its path while navigating toward the person. This project is for an autonomous vehicle controller by a VESC. The idea was motivated by the autonomous robots employed by food delivery companies like DoorDash and Uber Eats. 
