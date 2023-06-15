@@ -34,9 +34,9 @@ $throttle = S*e^{-(w-1)}$
 where S is the gain [0 1] that defines the steering range. S = 0.1 is used.
 
 ## Hand Gesture-Locked Box
-This component is controlled by a separate microcontroller: a Raspberry Pi. The script uses DepthAI to recognize a particular hand gesture. Upon recognizing the correct gesture, a servo motor is activated to open the box. The user may then retrieve their prize.
+This component is controlled by a separate microcontroller: an Arduino. The script uses DepthAI to recognize a particular hand gesture. Upon recognizing the user's close hand proximity, a servo motor is activated to open the box. The user may then retrieve their prize.
 
-## Future wants
+## Future wants - if given more time
 * higher H-FOV camera: cam loses sight of human easily
 * more robust human detection software - bounding box flickers
 * way to detach obstacle avoidance from human detection (maybe with lidar): obstacles are closer to the ground - humans are higher up, can't have the camera point at both
