@@ -30,7 +30,7 @@ The width of the boundary box is used as a reference for human distance from the
 $throttle = S*e^{-(w-1)}$
 </p>
 
-where S is the gain [0 1] that defines the steering range.
+where S is the gain [0 1] that defines the steering range. S = 0.1 is used.
 
 ## Hand Gesture-Locked Box
 This component is controlled by a separate microcontroller: a Raspberry Pi. The script uses DepthAI to recognize a particular hand gesture. Upon recognizing the correct gesture, a servo motor is activated to open the box. The user may then retrieve their prize.
