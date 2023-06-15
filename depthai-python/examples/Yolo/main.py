@@ -28,8 +28,8 @@ def throttle(width, scalar):
     # gas will be proportional to the width of the bounding box
     print(f"Bounding box width: {width}")
     if width < 0.6 and width > 0.1:
-        speed = 0.7*np.exp(0.21*(-width + 1)**5 + 2.0) - 5.06 # Extremely noticeable adaptive speed control
-        #speed = scalar*np.exp(-1.2*(width - 1.0)) - 0.04 #We want the speed to go down as the width gets larger
+        #speed = 0.7*np.exp(0.21*(-width + 1)**5 + 2.0) - 5.06 # Extremely noticeable adaptive speed control
+        speed = scalar*np.exp(-1.2*(width - 1.0)) - 0.04 #We want the speed to go down as the width gets larger
         
     else: 
         speed = 0
