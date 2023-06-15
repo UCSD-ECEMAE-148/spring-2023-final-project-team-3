@@ -20,6 +20,9 @@ The project goal is for the vehicle to find a human target, then follow them unt
 * DepthAI
 * Time
 
+## Running the Program
+
+
 ## Object Detection - "obs_avoid_2.py"
 The object detection script is accomplished using DepthAI on an OAK-D Lite. When an object comes into view, the robot will turn away from it depending on which region of the camera's view the object occupies. The camera FOV is divided into 5 "buckets"; objects towards the edge of the FOV (outer buckets) will make the bot turn less and objects towards the middle of the FOV (inner buckets) will make the bot turn more. The robot is instructed to stop when an object comes within ~2 feet of the camera.
 ![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-3/assets/15269806/c3ba8de2-26f1-4d0f-b4ba-43dd5ad15453)
