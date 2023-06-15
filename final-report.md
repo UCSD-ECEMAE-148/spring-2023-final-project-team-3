@@ -15,7 +15,7 @@ The project goal is for the vehicle to find a human target, then follow them unt
 * Follow a particular human with visual identifier
 
 ## Object Detection - "obs_avoid_2.py"
-The object detection script is accomplished using DepthAI on an OAK-D Lite. When an object comes into view, the robot will turn away from it depending on which region of the camera's view the object occupies. The camera FOV is divided into 5 "buckets"; objects towards the edge of the FOV (outer buckets) will make the bot turn less and objects towards the middle of the FOV (inner buckets) will make the bot turn more. The robot is instructed to stop when an object comes within ___ feet of the camera.
+The object detection script is accomplished using DepthAI on an OAK-D Lite. When an object comes into view, the robot will turn away from it depending on which region of the camera's view the object occupies. The camera FOV is divided into 5 "buckets"; objects towards the edge of the FOV (outer buckets) will make the bot turn less and objects towards the middle of the FOV (inner buckets) will make the bot turn more. The robot is instructed to stop when an object comes within ~2 feet of the camera.
 
 ## Human Following
 The human following script is accomplished using DepthAI Yolo on an OAK-D Lite. The function "displayframe" creates a bounding box around a human and determines its vertical centerline in horizontal pixels. The coordinate is normalized with the function "frameNorm" by dividing the coordinate by the horizontal image resolution - call this "x". The VESC steering value is calculated according to the following formula:
@@ -23,7 +23,14 @@ The human following script is accomplished using DepthAI Yolo on an OAK-D Lite. 
 $steering = G(x-0.5) + 0.5$
 </p>
 
-where G is the gain [0 1] that defines the steering range. For example if G = 0.5, the output steering range is [0.25 0.75].
+where G is the gain [0 1] that defines the steering range. For example if G = 0.5, the output steering range is [0.25 0.75]. 
+
+The width of the boundary box is used as a reference for human distance from the bot - call this "w". The VESC throttle value is calculated according to the following equation:
+<p align="center">
+$throttle = S*e^{-(w-1)}$
+</p>
+
+where S is the gain [0 1] that defines the steering range.
 
 ## Hand Gesture-Locked Box
 This component is controlled by a separate microcontroller: a Raspberry Pi. The script uses DepthAI to recognize a particular hand gesture. Upon recognizing the correct gesture, a servo motor is activated to open the box. The user may then retrieve their prize.
@@ -32,4 +39,4 @@ This component is controlled by a separate microcontroller: a Raspberry Pi. The 
 * Daniel Ruiz - object avoidance
 * Sialoi Taa - human detection
 * Hanyang Feng - hand gesture-locked box
-* Ryan Evans - main.py integration + documentation
+* Ryan Evans - script integration + documentation
