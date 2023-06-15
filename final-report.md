@@ -50,7 +50,9 @@ $throttle = S*e^{-T(w-1)} - U$
 where S, T, and U are experimentally determined scalars. S=0.08, T=1.2, and U=0.04 are used.
 
 ## Hand Gesture-Locked Box
-This component is controlled by a separate microcontroller: an Arduino. The script uses DepthAI to recognize a particular hand gesture. Upon recognizing the user's close hand proximity, a servo motor is activated to open the box. The user may then retrieve their prize.
+This component is controlled by a separate microcontroller: an Arduino. The script uses an Arduino ultrasound sensor to recognize when a hand is within close proximity to the box. When this happens, a servo motor is activated to open the box. The user may then retrieve their prize.
+![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-3/assets/15269806/a4a3ff0f-e233-4c53-a9ca-e25e01caf8e6)
+
 
 ## Future wants - if given more time
 * higher H-FOV camera: cam loses sight of human easily
