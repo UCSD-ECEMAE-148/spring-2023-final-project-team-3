@@ -44,10 +44,10 @@ where G is the gain [0 1] that defines the steering range. For example if G = 0.
 
 The width of the boundary box is used as a reference for human distance from the bot - call this "w". The VESC throttle value is calculated according to the following equation:
 <p align="center">
-$throttle = S*e^{-T(w-1)}$
+$throttle = S*e^{-T(w-1)} - U$
 </p>
 
-where S is the gain [0 1] that defines the steering range. S = 0.1 is used.
+where S, T, and U are experimentally determined scalars. S=0.08, T=1.2, and U=0.04 are used.
 
 ## Hand Gesture-Locked Box
 This component is controlled by a separate microcontroller: an Arduino. The script uses DepthAI to recognize a particular hand gesture. Upon recognizing the user's close hand proximity, a servo motor is activated to open the box. The user may then retrieve their prize.
