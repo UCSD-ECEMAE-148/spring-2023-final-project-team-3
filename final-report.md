@@ -40,7 +40,7 @@ The human following script is accomplished using DepthAI Yolo on an OAK-D Lite. 
 $steering = G(x-0.5) + 0.5$
 </p>
 
-where G is the gain [0 1] that defines the steering range. For example if G = 0.5, the output steering range is [0.25 0.75]. 
+where G is the gain [0 1] that defines the steering range. For example for G=0.5, the value used, the output steering range is [0.25 0.75]. 
 
 The width of the boundary box is used as a reference for human distance from the bot - call this "w". The VESC throttle value is calculated according to the following equation:
 <p align="center">
