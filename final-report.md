@@ -44,7 +44,7 @@ where G is the gain [0 1] that defines the steering range. For example if G = 0.
 
 The width of the boundary box is used as a reference for human distance from the bot - call this "w". The VESC throttle value is calculated according to the following equation:
 <p align="center">
-$throttle = S*e^{-(w-1)}$
+$throttle = S*e^{-T(w-1)}$
 </p>
 
 where S is the gain [0 1] that defines the steering range. S = 0.1 is used.
