@@ -63,3 +63,4 @@ This component is controlled by a separate microcontroller: an Arduino. The scri
 * Sialoi Taa - human detection
 * Hanyang Feng - hand gesture-locked box
 * Ryan Evans - script integration + documentation
+![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-3/assets/15269806/20f9d4cf-e42c-4c6a-86be-6a28eaaca141)
