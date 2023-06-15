@@ -19,10 +19,10 @@ The project goal is for the vehicle to find a human target, then follow them unt
 * OpenCV
 * DepthAI
 * Pathlib
+* MatPlotLib
 * Numpy
 * Math
 * Sys
-* MatPlotLib
 * Time
 
 ## Running the Program
