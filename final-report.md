@@ -26,7 +26,7 @@ The project goal is for the vehicle to find a human target, then follow them unt
 * Time
 
 ## Running the Program
-Navigate to this [sub-directory](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-3/tree/main/depthai-python/examples/Yolo) and run main.py to start the program.
+Navigate to this [sub-directory](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-3/tree/main/depthai-python/examples/Yolo). After this, you must clone this [git repo](https://github.com/luxonis/depthai) inside that directory. Look at the README for that git repo and install any other dependencies that must be on your machine before moving on. Inside the original [sub-directory](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-3/tree/main/depthai-python/examples/Yolo), run the main.py file to start the program while the robot is on a stand. Keep in mind that the robot only moves when a human is detected.
 
 ## Object Detection - "obs_avoid_2.py"
 The object detection script is accomplished using DepthAI on an OAK-D Lite. When an object comes into view, the robot will turn away from it depending on which region of the camera's view the object occupies. The camera FOV is divided into 5 "buckets"; objects towards the edge of the FOV (outer buckets) will make the bot turn less and objects towards the middle of the FOV (inner buckets) will make the bot turn more. The robot is instructed to stop when an object comes within ~2 feet of the camera.
