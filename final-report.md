@@ -1,5 +1,6 @@
 # Team 3 - The Autonomous Amigos - Human Following Robot with Obstacle Avoidance
 ## UCSD JSOE - ECE/MAE 148 - SP23 - Team 3
+![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-3/assets/15269806/b52651e0-bda4-4604-b015-3f4d74c3dca1)
 ### Team:
 * ECE: Sialoi Taa
 * MAE: Daniel Ruiz, Ryan Evans, Hanyang Feng
@@ -14,6 +15,9 @@ The project goal is for the vehicle to find a human target, then follow them unt
 * PID controller for steering/throttle
 * Follow a particular human with visual identifier
 * customizable hand gestures for locked box
+
+## Circuit Diagram
+![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-3/assets/15269806/f84c8c8e-6259-4def-9fda-73feed7f974f)
 
 ## Dependencies:
 * OpenCV
@@ -67,3 +71,5 @@ This component is controlled by a separate microcontroller: an Arduino. The scri
 * Ryan Evans - script integration + documentation
 
 ![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-3/assets/15269806/20f9d4cf-e42c-4c6a-86be-6a28eaaca141)
+
+![Presentation Link](https://docs.google.com/presentation/d/1Y1q2QuoTsn3PqqRi8QbTct-LNzPi7vVTz3AaYWV70es/edit?usp=sharing)
